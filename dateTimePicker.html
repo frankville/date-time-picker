@@ -1,0 +1,64 @@
+
+<div layout="column"  layout-align="center center">
+	<div style="text-align: center; height: 15em; margin: 1em;" >
+
+		<table hm-swipe-left="goForward($event,currDate)" hm-swipe-right="goBack($event,currDate)">
+			<caption>					
+				<div layout="row" class="calendar-header">
+				<md-button style="text-transform: none;" ng-click="goBack($event,currDate)">&lt;</md-button>  
+					<md-button style="text-transform: none;" flex style="vertical-align: middle;">
+						<strong>{{monthName}} {{currDate.getFullYear()}}</strong>  
+					</md-button>
+				<md-button style="text-transform: none;" ng-click="goForward($event,currDate)">&gt;</md-button>
+				</div>
+			</caption>
+			<thead class="light-headers">
+				<tr>
+					<th>Dom</th>
+					<th>Lun</th>
+					<th>Mar</th>
+					<th>Mie</th>
+					<th>Jue</th>
+					<th>Vie</th>
+					<th>Sab</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="w in monthArray">
+					<td ng-class="{'hiddenCell': w[0] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[0]}" ng-click="selectDay(w[0])">{{w[0]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[1] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[1]}" ng-click="selectDay(w[1])">{{w[1]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[2] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[2]}" ng-click="selectDay(w[2])">{{w[2]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[3] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[3]}" ng-click="selectDay(w[3])">{{w[3]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[4] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[4]}" ng-click="selectDay(w[4])">{{w[4]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[5] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[5]}" ng-click="selectDay(w[5])">{{w[5]}}</md-button></td>
+					<td ng-class="{'hiddenCell': w[6] === 0}"><md-button class="roundedDiv" ng-class="{'md-primary': currDate.getDate() === w[6]}" ng-click="selectDay(w[6])">{{w[6]}}</md-button></td>
+					<!--<td class="" ng-class="{'hiddenCell': w[0] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[0]}">{{w[0]}}</span></td>
+					<td ng-class="{'hiddenCell': w[1] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[1]}">{{w[1]}}</span></td>
+					<td ng-class="{'hiddenCell': w[2] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[2]}">{{w[2]}}</span></td>
+					<td ng-class="{'hiddenCell': w[3] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[3]}">{{w[3]}}</span></td>
+					<td ng-class="{'hiddenCell': w[4] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[4]}">{{w[4]}}</span></td>
+					<td ng-class="{'hiddenCell': w[5] === 0}"><span class="roundedDiv" ng-class="{selectedDiv: currDate.getDate() === w[5]}">{{w[5]}}</span></td>
+					<td ng-class="{'hiddenCell': w[6] === 0}"><span class="" ng-class="{selectedDiv: currDate.getDate() === w[6]}">{{w[6]}}</span></td> -->
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div layout="row" layout-margin>
+		<div flex>
+			<md-select ng-model="hour">
+			    <md-option ng-value="{{h}}" ng-repeat="h in hours">{{h}}</md-option>
+			</md-select>
+		</div>
+
+		<div flex>
+
+			<md-select ng-model="minute">
+			    <md-option ng-value="{{m}}" ng-repeat="m in minutes">{{m}}</md-option>
+			</md-select>
+		</div>
+	</div>
+</div>
+
+
+

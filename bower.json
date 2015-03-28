@@ -1,0 +1,25 @@
+{
+  "name": "datetest",
+  "version": "0.0.0",
+  "authors": [
+    "Villasanti Francisco <villasanti.francisco@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.8.3",
+    "html5Forms.js": "zoltan-dulac/html5Forms.js",
+    "better-dateinput-polyfill": "~1.5.2",
+    "md-date-time": "~0.0.14",
+    "angular-gestures": "~0.2.3",
+    "angular-bootstrap": "~0.12.1",
+    "bootstrap": "~3.3.4"
+  }
+}

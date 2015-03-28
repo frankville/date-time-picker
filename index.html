@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
+	<link rel="stylesheet" href="date-time-picker.css">
+	
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-material/angular-material.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.js"></script>
+	<script src="bower_components/angular-gestures/gestures.min.js"></script>
+
+<script src="date-time-picker.js"></script>
+
+</head>
+<body>
+	<!--<div ng-app="dateTest">
+		<time-date-picker ng-model="dateValue"></time-date-picker>
+	</div>-->
+	<div ng-app="dateTest">
+		<div  ng-controller="myController">
+			<date-combo curr-date="currDate"></date-combo>
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>	
